@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    /* Blue Theme  (default)*/
+    --theme-blue-points-color: #d7a04b;
+    --theme-blue-box-background-color: #010a78;
+    --theme-blue-font: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    --theme-blue-settings-header-color:white;
+
+    /* Global Styling */
+    --global-box-font-size: 4vw;
+    --global-box-borders: black solid 2px;
+    --global-border-radius: 4px;  
+
+    user-select: none;
+    overflow: hidden;
+}
+
+
+body {
+    margin: auto;
+    height: 99.5vh;
+    background-color: black;
+}
+
+.main_table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: var(--global-box-font-size);
+    border-width: 1px;
+    border-color: black;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.headers, .headers-category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3vw;
+    border-radius: var(--global-border-radius);
+    width: 25%;
+    border: var(--global-box-borders);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--theme-blue-box-background-color);
+    color: white;
+    padding: 5px;
+}
+
+.headers-edit:hover{ 
+    border: solid red 2px;
+}
+
+.headers > th {
+    border: var(--global-box-borders);
+}
+
+.boxes {
+    letter-spacing: 1px;
+    font-size: var(--global-box-font-size);
+    border-radius: var(--global-border-radius);
+    border: var(--global-box-borders);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--theme-blue-box-background-color);
+    color: var(--theme-blue-points-color);
+    cursor: pointer;
+    transition: transform 2s;
+    text-align: center;
+}
+
+.boxes:hover {
+    border-color: #d7a04b;
+}
+
+.questions {
+    text-shadow:2px 2px black;
+    font-size: 58px;
+    position: absolute;
+    background-color: #010a78;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    color: #d7a04b;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 12%;
+    visibility: hidden;
+    text-align: center;
+    border: 2px solid #d7a04b;
+}
+
+.timer-container {
+    height: 25px;
+    background-color:#010a78;
+    position: relative;
+}
+  
+.timer-container .timer-bar {
+    position: absolute;
+    height: 100%;
+    background-color: #d7a04b;
+    
+}
+  
+#play-timer-animation {
+    animation: timer-bar-animation 6s  1;
+}
+
+#play-timer-animation-double {
+    animation: timer-bar-animation-double 12s 1;
+}
+  
+@keyframes timer-bar-animation {
+    0% {width: 0%}
+    100% {width: 100%}
+}
+
+@keyframes timer-bar-animation-double {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+.choices {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.choices > p {
+    margin: 0;
+    margin-bottom: 10px;    
+    outline: 2px solid #d7a04b;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 0.5em;
+}
+
+.choices >p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    color: red;
+}
+
+u {
+    text-transform: uppercase;
+}
