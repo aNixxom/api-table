@@ -33,13 +33,13 @@ game_table.addEventListener('click', function(event) {
 //start setting up the game table 5 deep 
 for (let i = 0; i < 5; i++) {
     let rows = game_table.insertRow(i)
-    rows.id = `${i + 1}r${i + 1}c`
+    rows.id = `${i}r${i}c`
     
     //setting up the cells 4 wide 
     for(let y = 0; y < 4; y++) {
 
         cell = rows.insertCell(y)
-        cell.id = `r${i + 1}c${y + 1}`
+        cell.id = `r${i}c${y}`
         cell.innerText = cell.id 
         cell.setAttribute('class', 'boxes')
         cell.setAttribute('data-question', 'box')
@@ -107,19 +107,19 @@ fetch('./questions.json')
     .then((info) => {
         // get and set category headers from JSON 
         for(let i = 0; i < info['headings'].length; i++) {
-            headers.children[i].innerHTML = info['headings'][i]
+            // headers.children[i].innerHTML = info['headings'][i]
         }
         // set question worth & set questions for each cell
         cells.forEach((element, index) => {
-            element.childNodes[0].textContent = info['questions'][index].value
-            element.childNodes[1].children[0].innerHTML = info['questions'][index]['question']
+            // element.childNodes[0].textContent = info['questions'][index].value
+            // element.childNodes[1].children[0].innerHTML = info['questions'][index]['question']
         })
         // get and set the correct answer for each question from JSON and apply the answer to a random position
         // get the wrong answers and set them to a random position 
         choices.forEach((element, index) => {
-            getRandomOptionSlot(element, index, 'answer', info)
-            getRandomOptionSlot(element, index, 'wrong_1', info)
-            getRandomOptionSlot(element, index, 'wrong_2', info)
+            // getRandomOptionSlot(element, index, 'answer', info)
+            // getRandomOptionSlot(element, index, 'wrong_1', info)
+            // getRandomOptionSlot(element, index, 'wrong_2', info)
         })
     })
 // function to get random position for question options
