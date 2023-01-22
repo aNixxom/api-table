@@ -52,7 +52,7 @@ for (let i = 0; i < 5; i++) {
         const timer_bar = document.createElement('div')
 
         // creating the choices and options
-        for(let k = 0; k < 3; k++) {
+        for(let k = 0; k < 4; k++) {
             const choices_option = document.createElement('p')
             choices_option.innerHTML = `${k}`   
             choices.setAttribute('data-choice', 'choice')
