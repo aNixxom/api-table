@@ -106,7 +106,7 @@ body {
 }
   
 #play-timer-animation {
-    animation: timer-bar-animation 6s  1;
+    animation: timer-bar-animation 6s  ;
 }
 
 #play-timer-animation-double {
