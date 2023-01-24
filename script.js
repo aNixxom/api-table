@@ -36,7 +36,7 @@ for (let i = 0; i < 5; i++) {
     rows.id = `${i}r${i}c`
     
     //setting up the cells 4 wide 
-    for(let y = 0; y < 4; y++) {
+    for(let y = 0; y < 5; y++) {
 
         cell = rows.insertCell(y)
         cell.id = `r${i}c${y}`
@@ -50,6 +50,7 @@ for (let i = 0; i < 5; i++) {
         const choices = document.createElement('div')
         const timer_container = document.createElement('div')
         const timer_bar = document.createElement('div')
+        choices.id = `${cell.id}-ch`
 
         // creating the choices and options
         for(let k = 0; k < 4; k++) {
@@ -79,7 +80,7 @@ for (let i = 0; i < 5; i++) {
 // create and add the header section to the game table 
 let headers = game_table.insertRow(0)
 headers.setAttribute('class', 'headers')
-for(let i = 0; i < 4; i++) {
+for(let i = 0; i < 5; i++) {
     headers.insertCell()
 }
 
